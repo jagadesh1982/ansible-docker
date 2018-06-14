@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  tasks:
+   - name: Create another Nginx container
+     docker_container:
+       name: my-nginx
+       image: my-nginx:0.1
+       ports:
+         - "18880:80"
+       env:
+         KEY: value
+       command: sleep infinity

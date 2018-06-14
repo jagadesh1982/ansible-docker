@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Build Nginx image
+    docker_image:
+      path: .
+      name: my-nginx
+      tag: 0.1
